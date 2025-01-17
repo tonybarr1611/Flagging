@@ -1,0 +1,8 @@
+<div class="card w-25 card-flag text-center border-0">
+  <div>
+    <img [src]="country.flagPng" alt="" />
+  </div>
+  <div *ngIf="nameShown" class="card-body text-center">
+    <h5 class="card-title">{{ country.name }}</h5>
+  </div>
+</div>
