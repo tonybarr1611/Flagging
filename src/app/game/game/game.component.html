@@ -1,0 +1,36 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <div class="text-center text-light">
+    <h3>Which country is this flag from?</h3>
+    <div class="d-flex justify-content-center">
+      <app-flag
+        [country]="game[round].answer"
+        [nameShown]="false"
+        class="mx-auto"
+      ></app-flag>
+    </div>
+    <h1 class="mt-4">{{ score }} / {{ round }}</h1>
+    <p class="lead">You have 10 seconds to guess. Good luck!</p>
+    <div class="row mt-4">
+      <div class="col px-4 py-4" (click)="checkAnswer(0)">
+        <h5>
+          {{ game[round].options[0].name }}
+        </h5>
+      </div>
+      <div class="col px-4 py-4" (click)="checkAnswer(1)">
+        <h5>
+          {{ game[round].options[1].name }}
+        </h5>
+      </div>
+      <div class="col px-4 py-4" (click)="checkAnswer(2)">
+        <h5>
+          {{ game[round].options[2].name }}
+        </h5>
+      </div>
+      <div class="col px-4 py-4" (click)="checkAnswer(3)">
+        <h5>
+          {{ game[round].options[3].name }}
+        </h5>
+      </div>
+    </div>
+  </div>
+</div>
