@@ -1,8 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ChartOptions } from 'chart.js';
-
 @Component({
   selector: 'app-score',
   standalone: true,

@@ -19,26 +19,42 @@
       >
       </cd-timer>
     </p>
-    <div class="row mt-4">
-      <div class="col px-4 py-4" (click)="checkAnswer(0)">
-        <h5>
-          {{ game[round].options[0].name }}
-        </h5>
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-6 px-4 py-4">
+          <button
+            class="btn btn-outline-light w-100 rounded"
+            (click)="checkAnswer(0)"
+          >
+            <h5>{{ game[round].options[0].name }}</h5>
+          </button>
+        </div>
+        <div class="col-6 px-4 py-4">
+          <button
+            class="btn btn-outline-light w-100 rounded"
+            (click)="checkAnswer(1)"
+          >
+            <h5>{{ game[round].options[1].name }}</h5>
+          </button>
+        </div>
       </div>
-      <div class="col px-4 py-4" (click)="checkAnswer(1)">
-        <h5>
-          {{ game[round].options[1].name }}
-        </h5>
-      </div>
-      <div class="col px-4 py-4" (click)="checkAnswer(2)">
-        <h5>
-          {{ game[round].options[2].name }}
-        </h5>
-      </div>
-      <div class="col px-4 py-4" (click)="checkAnswer(3)">
-        <h5>
-          {{ game[round].options[3].name }}
-        </h5>
+      <div class="row">
+        <div class="col-6 px-4 py-4">
+          <button
+            class="btn btn-outline-light w-100 rounded"
+            (click)="checkAnswer(2)"
+          >
+            <h5>{{ game[round].options[2].name }}</h5>
+          </button>
+        </div>
+        <div class="col-6 px-4 py-4">
+          <button
+            class="btn btn-outline-light w-100 rounded"
+            (click)="checkAnswer(3)"
+          >
+            <h5>{{ game[round].options[3].name }}</h5>
+          </button>
+        </div>
       </div>
     </div>
   </div>

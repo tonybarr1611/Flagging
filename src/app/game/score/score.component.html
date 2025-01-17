@@ -13,18 +13,29 @@
       <span *ngIf="10 - score > 0 && 10 - score < 4">You're almost there!</span>
       <span *ngIf="10 - score >= 4">You can do better!</span>
     </p>
-    <canvas
-      baseChart
-      [type]="'pie'"
-      [datasets]="pieChartDatasets"
-      [labels]="pieChartLabels"
-      [options]="pieChartOptions"
-      [plugins]="pieChartPlugins"
-      [legend]="pieChartLegend"
-    >
-    </canvas>
-    <button class="btn btn-secondary" (click)="restartGame()">
-      Back to the start
-    </button>
+    <!-- Pie chart with right and wrong answers -->
+    <div class="mt-4 mb-4">
+      <div class="row justify-content-center" style="height: 200px">
+        <div class="col-3 text-center">
+          <div
+            style="width: 50px; background-color: green"
+            [style.height.px]="20 * score"
+          >
+            {{ score }} Right
+          </div>
+        </div>
+        <div class="col-3 text-center">
+          <div
+            style="width: 50px; background-color: red"
+            [style.height.px]="20 * (10 - score)"
+          >
+            {{ 10 - score }} Wrong
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-secondary mt-5" (click)="restartGame()">
+        Back to the start
+      </button>
+    </div>
   </div>
 </div>
