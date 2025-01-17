@@ -13,6 +13,16 @@
       <span *ngIf="10 - score > 0 && 10 - score < 4">You're almost there!</span>
       <span *ngIf="10 - score >= 4">You can do better!</span>
     </p>
+    <canvas
+      baseChart
+      [type]="'pie'"
+      [datasets]="pieChartDatasets"
+      [labels]="pieChartLabels"
+      [options]="pieChartOptions"
+      [plugins]="pieChartPlugins"
+      [legend]="pieChartLegend"
+    >
+    </canvas>
     <button class="btn btn-secondary" (click)="restartGame()">
       Back to the start
     </button>
