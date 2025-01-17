@@ -1,0 +1,18 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <div class="text-center text-light">
+    <div class="d-flex justify-content-center">
+      <app-flag
+        [country]="country"
+        [nameShown]="false"
+        class="mx-auto"
+      ></app-flag>
+    </div>
+    <h1 class="mt-4">Welcome to Flagging!</h1>
+    <p class="lead">
+      We'll show you the flag of a country and you have to guess which country
+      it belongs to. You'll have 10 seconds to guess. Good luck!
+    </p>
+    <p class="lead">At the end you'll be able to see your score</p>
+    <button class="btn btn-secondary" (click)="startGame()">Start Game</button>
+  </div>
+</div>
